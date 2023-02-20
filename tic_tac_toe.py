@@ -27,6 +27,8 @@ def cases():
     while True:
         print_board(board)
         user_move = getInputAsInt("Please Enter a number between 1 - 9 \n>") - 1
+        if user_move == -1:
+            break
         if user_move in avaliable_spaces:
             board.pop(user_move); avaliable_spaces.remove(user_move)
             board.insert(user_move, "X")
